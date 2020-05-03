@@ -97,21 +97,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmG-V1-wUn">
-                                <rect key="frame" x="170" y="438" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmG-V1-wUn">
+                                <rect key="frame" x="40" y="84" width="334" height="738"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cmG-V1-wUn" firstAttribute="top" secondItem="3VL-gg-9xo" secondAttribute="top" constant="40" id="M9R-Gj-2Sa"/>
+                            <constraint firstItem="3VL-gg-9xo" firstAttribute="trailing" secondItem="cmG-V1-wUn" secondAttribute="trailing" constant="40" id="PL0-YY-hvb"/>
+                            <constraint firstItem="cmG-V1-wUn" firstAttribute="leading" secondItem="3VL-gg-9xo" secondAttribute="leading" constant="40" id="rUI-zv-ERA"/>
+                            <constraint firstItem="3VL-gg-9xo" firstAttribute="bottom" secondItem="cmG-V1-wUn" secondAttribute="bottom" constant="40" id="sI5-Er-5zK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3VL-gg-9xo"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LyG-5s-lKw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2487" y="154"/>
+            <point key="canvasLocation" x="2486.9565217391305" y="153.34821428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

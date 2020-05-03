@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59E1D3C67FD863FAE08E68F4 /* Pods_LoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1C68984258FCCDF58501A1 /* Pods_LoginApp.framework */; };
+		E92178F3245E806B005D6359 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E92178F2245E806B005D6359 /* GoogleService-Info.plist */; };
 		E93EC31B245CC3A10013520E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EC31A245CC3A10013520E /* Constants.swift */; };
 		E9BE5D4A245A635B00994A32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5D49245A635B00994A32 /* AppDelegate.swift */; };
 		E9BE5D4C245A635B00994A32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5D4B245A635B00994A32 /* SceneDelegate.swift */; };
@@ -19,13 +20,13 @@
 		E9BE5D60245A63CD00994A32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5D5F245A63CD00994A32 /* LoginViewController.swift */; };
 		E9BE5D62245A63DD00994A32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5D61245A63DD00994A32 /* HomeViewController.swift */; };
 		E9D2DCDC245A7C4A00B044EF /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D2DCDB245A7C4A00B044EF /* Utilities.swift */; };
-		E9D2DCDE245A850800B044EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9D2DCDD245A850800B044EF /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2DE0E685D67F7643CAA8ED06 /* Pods-LoginApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp.release.xcconfig"; path = "Target Support Files/Pods-LoginApp/Pods-LoginApp.release.xcconfig"; sourceTree = "<group>"; };
 		5C1C68984258FCCDF58501A1 /* Pods_LoginApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAAB2FCE12F45A1387E0488 /* Pods-LoginApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp.debug.xcconfig"; path = "Target Support Files/Pods-LoginApp/Pods-LoginApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E92178F2245E806B005D6359 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E93EC31A245CC3A10013520E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9BE5D46245A635B00994A32 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BE5D49245A635B00994A32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		E9BE5D5F245A63CD00994A32 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E9BE5D61245A63DD00994A32 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E9D2DCDB245A7C4A00B044EF /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		E9D2DCDD245A850800B044EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 				E9BE5D52245A636000994A32 /* Assets.xcassets */,
 				E9BE5D54245A636000994A32 /* LaunchScreen.storyboard */,
 				E9BE5D57245A636000994A32 /* Info.plist */,
-				E9D2DCDD245A850800B044EF /* GoogleService-Info.plist */,
+				E92178F2245E806B005D6359 /* GoogleService-Info.plist */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9BE5D56245A636000994A32 /* LaunchScreen.storyboard in Resources */,
-				E9D2DCDE245A850800B044EF /* GoogleService-Info.plist in Resources */,
+				E92178F3245E806B005D6359 /* GoogleService-Info.plist in Resources */,
 				E9BE5D53245A636000994A32 /* Assets.xcassets in Resources */,
 				E9BE5D51245A635B00994A32 /* Main.storyboard in Resources */,
 			);
