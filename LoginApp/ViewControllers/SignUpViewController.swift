@@ -23,12 +23,14 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet weak var stackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setUpElements()
+ 
     }
+  
     
     func setUpElements() {
         //hide error label
@@ -71,7 +73,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
-       
+        hideError()
         //validate fields
         let error = validateFields()
         if error != nil {
@@ -84,7 +86,7 @@ class SignUpViewController: UIViewController {
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            hideError()
+            
             //create user
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 

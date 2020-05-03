@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var stackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,7 @@ class LoginViewController: UIViewController {
     }
     */
     @IBAction func loginTapped(_ sender: Any) {
-        
+        hideError()
         //validate fields
         
         let error = validateFields()
@@ -92,4 +93,9 @@ class LoginViewController: UIViewController {
         errorLabel.text = error
         errorLabel.alpha = 1
     }
+    
+    func hideError() {
+        errorLabel.alpha = 0
+    }
+       
 } 
