@@ -94,7 +94,7 @@ class SignUpViewController: UIViewController {
                 //err will be nil if no error occurs
                 if err != nil {
                     //error creating user
-                    self.showError("Error creating user")
+                    self.showError(err!.localizedDescription)
                 } else {
                     
                     //user created successfully
@@ -104,7 +104,7 @@ class SignUpViewController: UIViewController {
                  
                     db.collection("users").addDocument(data: ["firstName" : firstName, "lastName" : lastName, "uid" : result!.user.uid]) { (error) in
                         if error != nil {
-                            self.showError("Error saving user data")
+                            self.showError(error!.localizedDescription)
                         } else {
                             //transition to home screen
                              self.transitionToHome()
