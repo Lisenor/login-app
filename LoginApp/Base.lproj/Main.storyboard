@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XDa-Pb-iDn">
-                                <rect key="frame" x="40" y="40" width="334" height="370.5"/>
+                                <rect key="frame" x="40" y="40" width="334" height="440.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ytX-WV-9e7">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -41,8 +41,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joZ-im-XjX">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pcs-Gi-eOz">
                                         <rect key="frame" x="0.0" y="280" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joZ-im-XjX">
+                                        <rect key="frame" x="0.0" y="350" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Wds-V7-BGv"/>
                                         </constraints>
@@ -52,13 +57,14 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWv-WX-i2N">
-                                        <rect key="frame" x="0.0" y="350" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="420" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="pcs-Gi-eOz" firstAttribute="height" secondItem="ytX-WV-9e7" secondAttribute="height" id="C6Q-4e-YfS"/>
                                     <constraint firstItem="Xfk-ks-li3" firstAttribute="height" secondItem="ytX-WV-9e7" secondAttribute="height" id="Mmq-1f-W4V"/>
                                     <constraint firstItem="ytX-WV-9e7" firstAttribute="width" secondItem="XDa-Pb-iDn" secondAttribute="width" id="cyQ-MR-sWt"/>
                                     <constraint firstItem="5Hf-zn-oM3" firstAttribute="height" secondItem="ytX-WV-9e7" secondAttribute="height" id="lvg-X3-fBi"/>
@@ -76,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4SB-aE-7vG"/>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="pcs-Gi-eOz" id="Tfr-7k-aSy"/>
                         <outlet property="emailTextField" destination="5Hf-zn-oM3" id="WCe-Ve-fMg"/>
                         <outlet property="errorLabel" destination="oWv-WX-i2N" id="XkA-mA-C9V"/>
                         <outlet property="firstNameTextField" destination="ytX-WV-9e7" id="anf-Ts-fq8"/>

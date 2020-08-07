@@ -19,6 +19,10 @@ class SignUpViewController: UIViewController {
         
     @IBOutlet weak var passwordTextField: UITextField!
     
+    
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
+    
     @IBOutlet weak var signUpButton: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
@@ -58,18 +62,21 @@ class SignUpViewController: UIViewController {
         //all fields filled in
         if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-  
+            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+            
             return "Please fill in all fields"
         }
         
         //check password is secure
+        if passwordTextField.text! != confirmPasswordTextField.text! {
+            return "Passwords do not match"
+        }
         if !Utilities.isPasswordValid(passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)) {
             return "Please make sure your password is at least 8 characters, contains a special character and a number "
         }
         
-        //TODO: add email check
-        
+        //TODO: add email check - already built into firestore auth
         return nil
     }
     
