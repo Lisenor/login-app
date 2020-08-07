@@ -36,11 +36,12 @@ class SignUpViewController: UIViewController {
         //hide error label
         errorLabel.alpha = 0
         //style elements
-        Utilities.styleTextField(firstNameTextField)
+       /* Utilities.styleTextField(firstNameTextField)
         Utilities.styleTextField(lastNameTextField)
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(signUpButton)
+         */
     }
     /*
     // MARK: - Navigation
@@ -58,7 +59,7 @@ class SignUpViewController: UIViewController {
         if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            print("pooop")
+  
             return "Please fill in all fields"
         }
         

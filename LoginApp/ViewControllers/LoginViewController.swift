@@ -28,12 +28,16 @@ class LoginViewController: UIViewController {
     }
     
     func setUpElements() {
+        
+        // MARK: - delete
+        emailTextField.text = "bob@bmail.com"
+        passwordTextField.text = "Bob@12345"
         //hide error label
         errorLabel.alpha = 0
         //style elements
-        Utilities.styleTextField(emailTextField)
-        Utilities.styleTextField(passwordTextField)
-        Utilities.styleFilledButton(loginButton)
+       // Utilities.styleTextField(emailTextField)
+      //  Utilities.styleTextField(passwordTextField)
+      //  Utilities.styleFilledButton(loginButton)
     }
 
     /*
@@ -83,10 +87,14 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToHome() {
-          let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-          
-          view.window?.rootViewController = homeViewController
-          view.window?.makeKeyAndVisible()
+            
+        //TODO: - fix navigation / view controllers
+        
+         let navigationController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.navigationController) as? UINavigationController
+        
+         //present(navigationController!, animated: true, completion: nil)
+         view.window?.rootViewController = navigationController
+         // view.window?.makeKeyAndVisible()
       }
     
     func showError(_ error:String) {
