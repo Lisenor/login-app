@@ -30,8 +30,8 @@ class LoginViewController: UIViewController {
     func setUpElements() {
         
         // MARK: - delete
-        emailTextField.text = "bob@bmail.com"
-        passwordTextField.text = "Bob@12345"
+        emailTextField.text = "test@mail.com"
+        passwordTextField.text = "Testuser@123"
         //hide error label
         errorLabel.alpha = 0
         //style elements
