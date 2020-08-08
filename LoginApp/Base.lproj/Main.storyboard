@@ -46,7 +46,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joZ-im-XjX">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joZ-im-XjX" customClass="CustomButton" customModule="LoginApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="350" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Wds-V7-BGv"/>
@@ -166,7 +166,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qKs-bO-wTm">
                                 <rect key="frame" x="40" y="702" width="334" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOn-uq-sex">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOn-uq-sex" customClass="CustomButton" customModule="LoginApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Vxc-w9-0HN"/>
@@ -177,7 +177,7 @@
                                             <segue destination="J2N-Vu-egK" kind="presentation" id="rJe-ZY-yU4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGj-qM-yFB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGj-qM-yFB" customClass="CustomButton" customModule="LoginApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="334" height="50"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
@@ -233,7 +233,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh6-93-nrL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh6-93-nrL" customClass="CustomButton" customModule="LoginApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="140" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="IVF-bN-jdg"/>

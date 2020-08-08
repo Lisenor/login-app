@@ -34,31 +34,18 @@ class LoginViewController: UIViewController {
         passwordTextField.text = "Testuser@123"
         //hide error label
         errorLabel.alpha = 0
-        //style elements
-       // Utilities.styleTextField(emailTextField)
-      //  Utilities.styleTextField(passwordTextField)
-      //  Utilities.styleFilledButton(loginButton)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
     @IBAction func loginTapped(_ sender: Any) {
-        hideError()
+        Utilities.hideError(errorLabel)
         //validate fields
         
         let error = validateFields()
         if error != nil {
             //error found
-            showError(error!)
+            Utilities.showError(error!,errorLabel)
         } else {
-        
         
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -66,7 +53,7 @@ class LoginViewController: UIViewController {
             //sign in
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 if error != nil {
-                    self.showError(error!.localizedDescription)
+                    Utilities.showError(error!.localizedDescription,self.errorLabel)
                 } else {
                     self.transitionToHome()
                 }
@@ -97,13 +84,5 @@ class LoginViewController: UIViewController {
          // view.window?.makeKeyAndVisible()
       }
     
-    func showError(_ error:String) {
-        errorLabel.text = error
-        errorLabel.alpha = 1
-    }
-    
-    func hideError() {
-        errorLabel.alpha = 0
-    }
        
 } 

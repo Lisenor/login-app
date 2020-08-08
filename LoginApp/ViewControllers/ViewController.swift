@@ -37,9 +37,6 @@ class ViewController: UIViewController {
     
     func setUpElements() {
 
-        //style elements
-        //Utilities.styleFilledButton(signUpButton)
-        //Utilities.styleHollowButton(loginButton)
     }
         
     @IBAction func signUpTapped(_ sender: Any) {

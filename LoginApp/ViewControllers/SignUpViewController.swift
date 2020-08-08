@@ -34,28 +34,11 @@ class SignUpViewController: UIViewController {
         setUpElements()
  
     }
-  
     
     func setUpElements() {
         //hide error label
         errorLabel.alpha = 0
-        //style elements
-       /* Utilities.styleTextField(firstNameTextField)
-        Utilities.styleTextField(lastNameTextField)
-        Utilities.styleTextField(emailTextField)
-        Utilities.styleTextField(passwordTextField)
-        Utilities.styleFilledButton(signUpButton)
-         */
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controlle r.
-    }
-    */
 
     //validates input fields and returns error message if problem
     func validateFields() -> String? {
@@ -82,12 +65,12 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
-        hideError()
+        Utilities.hideError(errorLabel)
         //validate fields
         let error = validateFields()
         if error != nil {
             //error found
-            showError(error!)
+            Utilities.showError(error!,errorLabel)
         } else {
         
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -103,7 +86,7 @@ class SignUpViewController: UIViewController {
                 //err will be nil if no error occurs
                 if err != nil {
                     //error creating user
-                    self.showError(err!.localizedDescription)
+                     Utilities.showError(err!.localizedDescription,self.errorLabel)
                 } else {
                     
                     //user created successfully
@@ -113,7 +96,7 @@ class SignUpViewController: UIViewController {
                  
                     db.collection("users").addDocument(data: ["firstName" : firstName, "lastName" : lastName, "uid" : result!.user.uid]) { (error) in
                         if error != nil {
-                            self.showError(error!.localizedDescription)
+                             Utilities.showError(error!.localizedDescription,self.errorLabel)
                         } else {
                             //transition to home screen
                              self.transitionToHome()
@@ -131,15 +114,6 @@ class SignUpViewController: UIViewController {
         
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
-    }
-    
-    func showError(_ error:String) {
-        errorLabel.text = error
-        errorLabel.alpha = 1
-    }
-    
-    func hideError() {
-        errorLabel.alpha = 0
     }
     
 }

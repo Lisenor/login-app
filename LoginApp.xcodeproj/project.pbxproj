@@ -11,6 +11,7 @@
 		E92178F3245E806B005D6359 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E92178F2245E806B005D6359 /* GoogleService-Info.plist */; };
 		E93EC31B245CC3A10013520E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EC31A245CC3A10013520E /* Constants.swift */; };
 		E9B9D4E624DF32EB00FDB96B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9D4E524DF32EB00FDB96B /* CustomButton.swift */; };
+		E9B9D4ED24DF4CE700FDB96B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9D4EC24DF4CE700FDB96B /* Theme.swift */; };
 		E9BE5D4A245A635B00994A32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5D49245A635B00994A32 /* AppDelegate.swift */; };
 		E9BE5D4C245A635B00994A32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5D4B245A635B00994A32 /* SceneDelegate.swift */; };
 		E9BE5D4E245A635B00994A32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5D4D245A635B00994A32 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		E92178F2245E806B005D6359 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E93EC31A245CC3A10013520E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9B9D4E524DF32EB00FDB96B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E9B9D4EC24DF4CE700FDB96B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		E9BE5D46245A635B00994A32 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BE5D49245A635B00994A32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9BE5D4B245A635B00994A32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E9B9D4EB24DF4CDE00FDB96B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9B9D4EC24DF4CE700FDB96B /* Theme.swift */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		E9BE5D3D245A635B00994A32 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +105,7 @@
 		E9BE5D48245A635B00994A32 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				E9B9D4EB24DF4CDE00FDB96B /* Resources */,
 				E9D2DCDA245A7B3700B044EF /* Helpers */,
 				E9BE5D49245A635B00994A32 /* AppDelegate.swift */,
 				E9BE5D4B245A635B00994A32 /* SceneDelegate.swift */,
@@ -251,6 +263,7 @@
 				E9BE5D5E245A63BA00994A32 /* SignUpViewController.swift in Sources */,
 				E9BE5D60245A63CD00994A32 /* LoginViewController.swift in Sources */,
 				E9BE5D4C245A635B00994A32 /* SceneDelegate.swift in Sources */,
+				E9B9D4ED24DF4CE700FDB96B /* Theme.swift in Sources */,
 				E9BE5D62245A63DD00994A32 /* HomeViewController.swift in Sources */,
 				E93EC31B245CC3A10013520E /* Constants.swift in Sources */,
 			);
