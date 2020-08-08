@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginButton: CustomButton!
     
     @IBOutlet weak var stackView: UIStackView!
     

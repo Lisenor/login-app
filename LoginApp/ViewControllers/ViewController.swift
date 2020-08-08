@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var signUpButton: CustomButton!
     
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginButton: CustomButton!
     
     
     override func viewDidLoad() {

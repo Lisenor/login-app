@@ -10,6 +10,7 @@
 		59E1D3C67FD863FAE08E68F4 /* Pods_LoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1C68984258FCCDF58501A1 /* Pods_LoginApp.framework */; };
 		E92178F3245E806B005D6359 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E92178F2245E806B005D6359 /* GoogleService-Info.plist */; };
 		E93EC31B245CC3A10013520E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EC31A245CC3A10013520E /* Constants.swift */; };
+		E9B9D4E624DF32EB00FDB96B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9D4E524DF32EB00FDB96B /* CustomButton.swift */; };
 		E9BE5D4A245A635B00994A32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5D49245A635B00994A32 /* AppDelegate.swift */; };
 		E9BE5D4C245A635B00994A32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5D4B245A635B00994A32 /* SceneDelegate.swift */; };
 		E9BE5D4E245A635B00994A32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE5D4D245A635B00994A32 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		9AAAB2FCE12F45A1387E0488 /* Pods-LoginApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp.debug.xcconfig"; path = "Target Support Files/Pods-LoginApp/Pods-LoginApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E92178F2245E806B005D6359 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E93EC31A245CC3A10013520E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E9B9D4E524DF32EB00FDB96B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		E9BE5D46245A635B00994A32 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BE5D49245A635B00994A32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9BE5D4B245A635B00994A32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				E9D2DCDB245A7C4A00B044EF /* Utilities.swift */,
 				E93EC31A245CC3A10013520E /* Constants.swift */,
+				E9B9D4E524DF32EB00FDB96B /* CustomButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				E9BE5D4E245A635B00994A32 /* ViewController.swift in Sources */,
 				E9BE5D4A245A635B00994A32 /* AppDelegate.swift in Sources */,
+				E9B9D4E624DF32EB00FDB96B /* CustomButton.swift in Sources */,
 				E9D2DCDC245A7C4A00B044EF /* Utilities.swift in Sources */,
 				E9BE5D5E245A63BA00994A32 /* SignUpViewController.swift in Sources */,
 				E9BE5D60245A63CD00994A32 /* LoginViewController.swift in Sources */,

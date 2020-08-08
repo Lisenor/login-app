@@ -11,6 +11,8 @@ import FirebaseAuth
 import Firebase
 class SignUpViewController: UIViewController {
 
+    //outlets
+    
     @IBOutlet weak var firstNameTextField: UITextField!
     
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -19,11 +21,9 @@ class SignUpViewController: UIViewController {
         
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
-    
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var signUpButton: CustomButton!
     
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -72,6 +72,7 @@ class SignUpViewController: UIViewController {
         if passwordTextField.text! != confirmPasswordTextField.text! {
             return "Passwords do not match"
         }
+        
         if !Utilities.isPasswordValid(passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)) {
             return "Please make sure your password is at least 8 characters, contains a special character and a number "
         }
