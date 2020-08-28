@@ -24,7 +24,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setUpElements()
     }
     
@@ -52,11 +51,11 @@ class LoginViewController: UIViewController {
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
                    
             //sign in
-            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-                if error != nil {
-                    Utilities.showError(error: error!.localizedDescription,errorLabel: self.errorLabel)
+            Database.signIn(email: email, password: password) { (uid, err) in
+                if err != "" {
+                    Utilities.showError(error: err, errorLabel: self.errorLabel)
                 } else {
-                     //TODO: login user-user class
+                     //TODO: login user-user class with uid
                     self.transitionToHome()
                 }
             }

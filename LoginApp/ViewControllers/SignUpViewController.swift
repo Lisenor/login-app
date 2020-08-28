@@ -30,16 +30,11 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
- 
     }
     
-    func setUpElements() {
-        //hide error label
-        errorLabel.alpha = 0
-    }
+
 
     //validates input fields and returns error message if problem
-    
     //move to utilities
     func validateFields() -> String? {
         //all fields filled in
@@ -85,11 +80,11 @@ class SignUpViewController: UIViewController {
 
             
             //create user
-            Utilities.createUser(email: email, password: password) { (uid, error) in
+            Database.createUser(email: email, password: password) { (uid, error) in
                 if error != "" {
                     Utilities.showError(error: error, errorLabel: self.errorLabel)
                 } else {
-                    Utilities.addUser(firstName: firstName, lastName: lastName, uid: uid) { (uid, err) in
+                    Database.addUser(firstName: firstName, lastName: lastName, uid: uid) { (uid, err) in
                         if err != "" {
                             Utilities.showError(error: err, errorLabel: self.errorLabel)
                         } else {
@@ -108,4 +103,11 @@ class SignUpViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
+    func setUpElements() {
+        //hide error label
+        errorLabel.alpha = 0
+    }
+    
 }
+
+

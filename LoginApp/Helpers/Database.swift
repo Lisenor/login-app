@@ -10,11 +10,50 @@ import FirebaseAuth
 import Firebase
 class Database {
     
-    //have functions return the errors -closures?? Completion handler
-    //handle error display on view
-    //remove passing in label
     
-   
+    
+    static let db = Firestore.firestore()
+    
+    //TODO wrap closure params in struct to retain labels
+    
+    //function to create a new user
+    static func createUser(email:String, password: String, completion: @escaping (_ uid: String, _ err: String)-> Void) {
+      Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+          if error != nil {
+              // Error creating new user.
+              completion("",error!.localizedDescription)
+              
+          } else {
+              // Create successfully.
+              completion(user!.user.uid,"")
+          }
+      }
+    }
+
+    //function to add users info to db
+    static func addUser(firstName: String, lastName: String, uid: String,
+                      completion: @escaping (_ uid: String, _ err: String) -> Void) {
+
+      db.collection("users").addDocument(data: ["firstName" : firstName, "lastName" : lastName, "uid" : uid]) { (error) in
+         
+          if error != nil {
+               completion(uid, error!.localizedDescription)
+          } else {
+               completion(uid,"")
+          }
+      }
+
+    }
+      
+    static func signIn(email: String, password: String, completion: @escaping (_ uid: String,_ error: String) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+            if err != nil {
+                completion("",err!.localizedDescription)
+            } else {
+                completion(result!.user.uid, "") //NOT WORKING
+            }
+        }
+    }
     
 }
      
