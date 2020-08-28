@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 class LoginViewController: UIViewController {
 
     
@@ -38,13 +39,13 @@ class LoginViewController: UIViewController {
 
    
     @IBAction func loginTapped(_ sender: Any) {
-        Utilities.hideError(errorLabel)
+        Utilities.hideError(errorLabel: errorLabel)
         //validate fields
         
         let error = validateFields()
         if error != nil {
             //error found
-            Utilities.showError(error!,errorLabel)
+            Utilities.showError(error: error!,errorLabel: errorLabel)
         } else {
         
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -53,8 +54,9 @@ class LoginViewController: UIViewController {
             //sign in
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 if error != nil {
-                    Utilities.showError(error!.localizedDescription,self.errorLabel)
+                    Utilities.showError(error: error!.localizedDescription,errorLabel: self.errorLabel)
                 } else {
+                     //TODO: login user-user class
                     self.transitionToHome()
                 }
             }
@@ -75,13 +77,12 @@ class LoginViewController: UIViewController {
     
     func transitionToHome() {
             
-        //TODO: - fix navigation / view controllers
-        
+        //TODO: move to utilities??
          let navigationController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.navigationController) as? UINavigationController
         
          //present(navigationController!, animated: true, completion: nil)
          view.window?.rootViewController = navigationController
-         // view.window?.makeKeyAndVisible()
+         view.window?.makeKeyAndVisible()
       }
     
        
